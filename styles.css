@@ -398,6 +398,15 @@ p{
   box-shadow:var(--shadow);
 }
 
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin-top:18px;
+  flex-wrap:wrap; /* keeps it clean on mobile */
+}
+
 .narrow-center{
   max-width:780px;
   text-align:center;
