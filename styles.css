@@ -358,9 +358,7 @@ p{
 
 .story-band{
   max-width:none;
-  background:
-    radial-gradient(circle at center top, rgba(0,0,0,0.035), transparent 34%),
-    var(--bg-soft);
+  background:linear-gradient(to bottom, #f2f2ef, #eeeeea);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
