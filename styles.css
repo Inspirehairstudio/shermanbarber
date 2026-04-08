@@ -261,6 +261,17 @@ p{
   margin-top:8px;
 }
 
+.social-links-dark a{
+  background:rgba(0,0,0,0.04);
+  color:#111;
+}
+
+.social-links-dark a:hover{
+  background:#111;
+  color:#fff;
+  transform:translateY(-2px);
+}
+
 .hero-trust{
   display:flex;
   flex-wrap:wrap;
