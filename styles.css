@@ -356,6 +356,15 @@ p{
    INTRO / CARDS
 ========================= */
 
+.story-band{
+  max-width:none;
+  background:
+    radial-gradient(circle at center top, rgba(0,0,0,0.035), transparent 34%),
+    var(--bg-soft);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
 .intro-grid{
   display:grid;
   grid-template-columns:1.05fr 1fr;
