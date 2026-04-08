@@ -189,7 +189,7 @@ p{
 .header-actions{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
 }
 
 /* =========================
@@ -261,10 +261,19 @@ p{
   margin-top:8px;
 }
 
-.social-links-dark{
+.social-links-dark a{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   gap:10px;
   margin-right:6px;
 }
+
+.social-links-dark a:focus,
+.social-links-dark a:focus-visible{
+  outline:none;
+  box-shadow:none;
+}
+
 
 .social-links-dark a{
   background:rgba(0,0,0,0.04);
