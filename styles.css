@@ -110,6 +110,10 @@ p{
   font-size:1.04rem;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 .site-header{
   position:sticky;
   top:0;
@@ -127,6 +131,17 @@ p{
   align-items:center;
   justify-content:space-between;
   gap:24px;
+}
+
+.logo-link{
+  display:inline-flex;
+  align-items:center;
+}
+
+.site-logo{
+  height:48px;
+  width:auto;
+  object-fit:contain;
 }
 
 .brand{
@@ -177,6 +192,10 @@ p{
   gap:12px;
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero{
   position:relative;
   min-height:92svh;
@@ -196,7 +215,7 @@ p{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 52%;
+  object-position:center 54%;
 }
 
 .hero-overlay{
@@ -262,6 +281,10 @@ p{
   font-weight:600;
 }
 
+/* =========================
+   BUTTONS
+========================= */
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -312,6 +335,27 @@ p{
   transform:translateY(-2px);
 }
 
+.section-cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.center-cta{
+  justify-content:center;
+}
+
+.left-buttons{
+  justify-content:flex-start;
+}
+
+/* =========================
+   INTRO / CARDS
+========================= */
+
 .intro-grid{
   display:grid;
   grid-template-columns:1.05fr 1fr;
@@ -354,18 +398,23 @@ p{
   margin-right:auto;
 }
 
-.gallery-section .section-header{
-  max-width:760px;
+/* =========================
+   SPLIT FEATURE
+========================= */
+
+.split-feature-section{
+  padding-top:84px;
+  padding-bottom:84px;
 }
 
-.photo-grid{
+.split-feature-grid{
   display:grid;
-  grid-template-columns:1fr 1.2fr 1fr;
-  gap:20px;
-  align-items:stretch;
+  grid-template-columns:420px 1fr;
+  gap:34px;
+  align-items:center;
 }
 
-.photo-card{
+.split-feature-media{
   overflow:hidden;
   border-radius:26px;
   border:1px solid var(--line);
@@ -373,27 +422,70 @@ p{
   background:#ddd;
 }
 
-.photo-card.tall{
-  height:560px;
-}
-
-.photo-card.wide{
-  height:560px;
-}
-
-.photo-card img{
+.split-feature-media img{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
+  object-position:center 36%;
 }
 
-.photo-card.tall img{
-  object-position:center 34%;
+.split-feature-copy{
+  max-width:760px;
 }
 
-.photo-card.wide img{
-  object-position:center 40%;
+/* =========================
+   IMAGE BREAK
+========================= */
+
+.image-break-section{
+  padding-top:40px;
+  padding-bottom:40px;
 }
+
+.image-break-grid{
+  display:grid;
+  grid-template-columns:1fr 430px;
+  gap:30px;
+  align-items:center;
+}
+
+.image-break-copy{
+  max-width:760px;
+}
+
+.image-break-media{
+  overflow:hidden;
+  border-radius:26px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  background:#ddd;
+}
+
+.image-break-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  object-position:center 42%;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews-widget-shell{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:24px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+/* =========================
+   LOCAL / LOCATION
+========================= */
 
 .local-section .two-col-copy{
   display:grid;
@@ -431,10 +523,6 @@ p{
   margin:0;
 }
 
-.left-buttons{
-  justify-content:flex-start;
-}
-
 .map-card{
   padding:0;
   overflow:hidden;
@@ -445,6 +533,48 @@ p{
   height:100%;
   min-height:420px;
 }
+
+/* =========================
+   TEAM LINK SECTION
+========================= */
+
+.team-link-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+
+.team-link-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:28px;
+  align-items:center;
+}
+
+.team-link-copy{
+  max-width:760px;
+}
+
+.team-link-media{
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:#ddd;
+}
+
+.team-link-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  object-position:center 32%;
+}
+
+/* =========================
+   BOTTOM CTA
+========================= */
 
 .bottom-cta{
   max-width:none;
@@ -472,6 +602,10 @@ p{
   margin:0 auto 28px;
   color:rgba(255,255,255,0.8);
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
   border-top:1px solid var(--line);
@@ -509,6 +643,10 @@ p{
   color:#111;
 }
 
+/* =========================
+   MOBILE BOOK
+========================= */
+
 .mobile-book{
   position:fixed;
   left:0;
@@ -534,23 +672,21 @@ p{
   transform:translateY(0);
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 1100px){
   .cards-grid{
     grid-template-columns:repeat(2, minmax(0, 1fr));
   }
 
-  .photo-grid{
-    grid-template-columns:1fr;
-  }
-
-  .photo-card.tall,
-  .photo-card.wide{
-    height:460px;
-  }
-
   .intro-grid,
   .local-section .two-col-copy,
-  .location-grid{
+  .location-grid,
+  .split-feature-grid,
+  .image-break-grid,
+  .team-link-grid{
     grid-template-columns:1fr;
   }
 }
@@ -573,6 +709,12 @@ p{
   .hero-content{
     padding:150px 24px 88px;
   }
+
+  .split-feature-media,
+  .image-break-media,
+  .team-link-media{
+    max-width:620px;
+  }
 }
 
 @media (max-width: 768px){
@@ -594,7 +736,7 @@ p{
   }
 
   .hero-media img{
-    object-position:center 34%;
+    object-position:center 50%;
   }
 
   .hero-content{
@@ -614,9 +756,9 @@ p{
     grid-template-columns:1fr;
   }
 
-  .photo-card.tall,
-  .photo-card.wide{
-    height:380px;
+  .section-cta{
+    flex-direction:column;
+    align-items:stretch;
   }
 
   .btn{
@@ -630,6 +772,20 @@ p{
 
   body{
     padding-bottom:64px;
+  }
+
+  .site-logo{
+    height:42px;
+  }
+
+  .location-card,
+  .map-card,
+  .info-card,
+  .why-card,
+  .team-link-card,
+  .reviews-widget-shell{
+    padding:20px;
+    border-radius:20px;
   }
 }
 
@@ -651,19 +807,12 @@ p{
   }
 
   .hero-media img{
-    object-position:center 36%;
+    object-position:center 48%;
   }
 
-  .photo-card.tall,
-  .photo-card.wide{
-    height:320px;
-  }
-
-  .location-card,
-  .map-card,
-  .info-card,
-  .why-card{
-    padding:20px;
+  .split-feature-media,
+  .image-break-media,
+  .team-link-media{
     border-radius:20px;
   }
 }
