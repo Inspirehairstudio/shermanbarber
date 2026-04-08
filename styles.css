@@ -261,6 +261,11 @@ p{
   margin-top:8px;
 }
 
+.social-links-dark{
+  gap:10px;
+  margin-right:6px;
+}
+
 .social-links-dark a{
   background:rgba(0,0,0,0.04);
   color:#111;
